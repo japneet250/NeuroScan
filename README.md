@@ -31,16 +31,16 @@ A live demo of the project can be accessed [here](#).
 
 ### 1. Clone the repository:
 
-```bash
+bash
 git clone https://github.com/your-username/NeuroScan.git
-cd NeuroScan```
+cd NeuroScan
 
 
 ### 2. Backend Setup
 
 Navigate to the `backend/` folder and install dependencies.
 
-```bash
+bash
 cd backend
 pip install -r requirements.txt
 
