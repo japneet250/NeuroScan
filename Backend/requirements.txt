@@ -1,0 +1,8 @@
+Flask==2.1.2
+TensorFlow==2.8.0
+scikit-learn==0.24.2
+Numpy==1.21.4
+Pillow==8.4.0
+OpenCV==4.5.3
+Flask-Cors==3.1.1
+pymongo==3.12.0
