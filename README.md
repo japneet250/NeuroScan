@@ -31,7 +31,10 @@ A live demo of the project can be accessed [here](#).
 
 ### 1. Clone the repository:
 
-bash
+```bash
+# Your bash commands go here
+command1
+command2
 git clone https://github.com/your-username/NeuroScan.git
 cd NeuroScan
 
