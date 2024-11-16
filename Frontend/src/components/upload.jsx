@@ -477,7 +477,7 @@ const Upload = () => {
     setError(null);
 
     try {
-      const response = await axios.post('https://neuro-scan-ten.vercel.app/predict', formData, {
+      const response = await axios.post('https://neuro-scan-ten.vercel.app', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
