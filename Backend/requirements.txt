@@ -1,5 +1,5 @@
 Flask==2.1.2
-TensorFlow==2.8.0
+TensorFlow
 scikit-learn==0.24.2
 Numpy==1.21.4
 Pillow==8.4.0
