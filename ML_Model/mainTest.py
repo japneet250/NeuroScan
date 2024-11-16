@@ -5,7 +5,7 @@ import numpy as np
 
 model = load_model('./ML_Model/BrainTumour10EpochsCategorical.keras')
 
-image  = cv2.imread('/Users//japneetsingh/Documents/NEUROSCAN/Dataset//pred/pred8.jpg')
+image  = cv2.imread('/Users//japneetsingh/Documents/NEUROSCAN/Dataset//pred/pred9.jpg')
 
 img = Image.fromarray(image)
 

@@ -24,28 +24,29 @@ yes_tumour_images= os.listdir(image_folder+ 'yes/')
 
 #print(no_tumour_images)
 
-for i, image_name in enumerate(no_tumour_images):
-  if image_name.split('.')[1] == 'jpg':
-    img = cv2.imread(image_folder + 'no/' +image_name)
-    image = Image.fromarray(img,'RGB')
+class_names = {'no_tumor': 0, 'yes': 1, 'glioma_tumor': 2, 'meningioma_tumor': 3, 'pituitary_tumor': 4}
 
-    image = image.resize((INPUT_SIZE,INPUT_SIZE))
+for category, label_id in class_names.items():
+    images = os.listdir(image_folder + category + '/')
+    for image_name in images:
+        if image_name.endswith('.jpg'):
+            img = cv2.imread(image_folder + category + '/' + image_name)
+            image = Image.fromarray(img, 'RGB').resize((INPUT_SIZE, INPUT_SIZE))
+            dataset.append(np.array(image))
+            label.append(label_id)
 
-    dataset.append(np.array(image))
-    label.append(0)
+# for i, image_name in enumerate(yes_tumour_images):
+#   if image_name.split('.')[1] == 'jpg':
+#       img = cv2.imread(image_folder + 'yes/' +image_name)
+#       image = Image.fromarray(img,'RGB')
 
-for i, image_name in enumerate(yes_tumour_images):
-  if image_name.split('.')[1] == 'jpg':
-      img = cv2.imread(image_folder + 'yes/' +image_name)
-      image = Image.fromarray(img,'RGB')
+#       image = image.resize((INPUT_SIZE,INPUT_SIZE))
 
-      image = image.resize((INPUT_SIZE,INPUT_SIZE))
+#       dataset.append(np.array(image))
+#       label.append(1)
 
-      dataset.append(np.array(image))
-      label.append(1)
-
-      # print(dataset[0])
-      # print(label[0])
+#       # print(dataset[0])
+#       # print(label[0])
 
 dataset=  np.array(dataset)
 label = np.array(label)
@@ -62,8 +63,8 @@ print(y_test.shape)
 x_train = normalize(x_train, axis=1)
 x_test = normalize(x_test, axis=1)
 
-y_train = to_categorical(y_train,num_classes=2)
-y_test = to_categorical(y_test,num_classes=2)
+y_train = to_categorical(y_train,num_classes=5)
+y_test = to_categorical(y_test,num_classes=5)
 
 
 # Model Building
@@ -86,7 +87,7 @@ model.add(Flatten())
 model.add(Dense(64))
 model.add(Activation('relu')) 
 model.add(Dropout(0.5))
-model.add(Dense(2))
+model.add(Dense(5))
 model.add(Activation('softmax'))
 
 # Binary CrossEntropy = 1 , sigmoid
@@ -96,5 +97,4 @@ model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accur
 
 model.fit(x_train, y_train, batch_size=16, verbose = 1,epochs=10, validation_data=(x_test, y_test), shuffle=False)
 
-model.save('BrainTumour10EpochsCategorical.keras')
-
+model.save('./ML_Model/test.keras')
