@@ -479,8 +479,7 @@ const Upload = () => {
     try {
 
       const response = await axios.post('https://test3n-858207113120.us-central1.run.app/predict', formData, { d6c03bbfdc7fa5cdbc9647333de8d8170fc6264d
-                                                                                                             } 
-                                        headers: {
+        headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
