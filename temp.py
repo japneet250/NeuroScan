@@ -12,11 +12,10 @@ try:
     model = load_model('BrainTumour10EpochsCategorical.keras')
 except Exception as e:
     print(f"Error loading model: {e}")
-    
 
 # MongoDB setup
 try:
-    client = MongoClient("mongodb+srv://dbUser:japneet@cluster0.ds4ga.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+    client = MongoClient("mongodb://0.0.0.0:27017/")
     db = client["brain_tumor_detection"]
     collection = db["predictions"]
 except Exception as e:
@@ -120,5 +119,4 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=4000, debug=True)
-
+    app.run(debug=True)
