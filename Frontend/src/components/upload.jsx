@@ -477,7 +477,7 @@ const Upload = () => {
     setError(null);
 
     try {
-      const response = await axios.post('https://test3n-858207113120.us-central1.run.app', formData, {
+      const response = await axios.post('https://test3n-858207113120.us-central1.run.app/predict', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
