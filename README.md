@@ -23,7 +23,7 @@ A live demo of the project can be accessed [here](#).
 - **Backend**: Flask (Python)
 - **Machine Learning**: TensorFlow (CNN model for brain tumor detection)
 - **Database**: MongoDB (for user data and predictions)
-- **Others**: Python libraries like Numpy and scikit-learn for data processing, OpenCV for image handling
+- **Others**: Python libraries like Numpy and scikit-learn for data processing, OpenCV for image handling , Docker , Google Cloud , Vercel 
 
 ---
 
