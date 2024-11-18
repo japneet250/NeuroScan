@@ -421,7 +421,7 @@ const CloseButton = styled.button`
 
 const Upload = () => {
   const [file, setFile] = useState(null);
-  const [anonymous, setAnonymous] = useState(true);
+  const [anonymous, setAnonymous] = useState(false);
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [country, setCountry] = useState("");
@@ -507,7 +507,7 @@ const Upload = () => {
                   id="anonymous-checkbox"
                   type="checkbox"
                   checked={anonymous}
-                  onChange={() => setAnonymous(!anonymous)}
+                  onChange={() => setAnonymous(anonymous)}
                 />
                 <label htmlFor="anonymous-checkbox">Submit Anonymously</label>
                 <InfoIcon onClick={() => setShowTooltip(!showTooltip)} />
