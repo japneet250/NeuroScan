@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Navbar from "./Navbar";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
+import { FaArrowRight } from 'react-icons/fa';
 
 const Section = styled.div`
   height: 100vh;
@@ -220,7 +221,9 @@ const Hero = () => {
       <Navbar />
       <Container>
         <Left>
-          <Title>Upload Brain Image --> Get Prediction.</Title>
+          <Title>
+            Upload Brain Image <FaArrowRight style={{ margin: '0 10px' }} /> Get Prediction.
+          </Title>
           <WhatWeDo>
             <Line src="./img/line.png" />
             <Subtitle>What we Do</Subtitle>
