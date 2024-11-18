@@ -221,9 +221,7 @@ const Hero = () => {
       <Navbar />
       <Container>
         <Left>
-          <Title>
-            Upload Brain Image <FaArrowRight style={{ margin: '0 10px' }} /> Get Prediction.
-          </Title>
+          <Title>Upload Brain Image ➡ Get Prediction</Title>
           <WhatWeDo>
             <Line src="./img/line.png" />
             <Subtitle>What we Do</Subtitle>
