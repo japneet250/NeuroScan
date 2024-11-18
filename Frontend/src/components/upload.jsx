@@ -507,7 +507,7 @@ const Upload = () => {
                   id="anonymous-checkbox"
                   type="checkbox"
                   checked={anonymous}
-                  onChange={() => setAnonymous(anonymous)}
+                  onChange={() => setAnonymous(!anonymous)}
                 />
                 <label htmlFor="anonymous-checkbox">Submit Anonymously</label>
                 <InfoIcon onClick={() => setShowTooltip(!showTooltip)} />
