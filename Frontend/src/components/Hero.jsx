@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Navbar from "./Navbar";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
+import { VscArrowRight } from "react-icons/vsc";
 
 const Section = styled.div`
   height: 100vh;
@@ -232,6 +233,11 @@ const SphereContainer = styled(Sphere)`
    
 `;
 
+const Icon = styled(VscArrowRight)`
+  vertical-align: middle; /* Aligns icon with text */
+  font-size: 1em; /* Adjust icon size relative to the text */
+`;
+
 
 const Hero = () => {
   return (
@@ -239,7 +245,7 @@ const Hero = () => {
       <Navbar />
       <Container>
         <Left>
-          <Title>Upload Brain Image : Get Prediction.</Title>
+          <Title>Upload Brain Image <Icon/> Get Prediction.</Title>
           <WhatWeDo>
             <Line src="./img/line.png" />
             <Subtitle>What we Do</Subtitle>
