@@ -70,7 +70,7 @@ const Left = styled.div`
   }
 
   @media (max-width: 767px) {
-    margin-top : 50px;
+    margin-top : 60px;
   
   
   }

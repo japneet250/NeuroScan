@@ -120,7 +120,7 @@ const CanvasContainer = styled.div`
 
 const ProductDesign = () => {
   // Use media query to detect if the screen width is 480px or less
-  const isMobile = useMediaQuery({ query: "(max-width: 480px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   return (
     <Wrapper>
