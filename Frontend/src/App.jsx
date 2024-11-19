@@ -4,6 +4,9 @@ import Hero from "./components/Hero";
 import Who from "./components/Who";
 import ProductDesign from "./components/ProductDesign";
 import Upload from "./components/upload";
+import './index.css';
+
+
 
 const Container = styled.div`
   height: 100vh;
@@ -17,6 +20,7 @@ const Container = styled.div`
     display: none;
   }
 `;
+
 
 function App() {
   return (
