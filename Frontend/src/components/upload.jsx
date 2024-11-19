@@ -16,7 +16,7 @@ const Container = styled.div`
     margin-top: 250px;
   }
 
-  @media only screen and (max-width: 450px) {
+  @media (max-width: 767px) {
     margin-top: 20px;
   }
 

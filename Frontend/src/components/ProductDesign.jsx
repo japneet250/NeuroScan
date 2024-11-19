@@ -23,7 +23,7 @@ const Wrapper = styled.div`
     padding: 20px 0;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 767px) {
     margin: 0px;
     padding-top: 0px;
   }
@@ -45,7 +45,7 @@ const TextContainer = styled.div`
     flex: 1;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 767px) {
     margin: 0px;
     padding-top: 0px;
     
@@ -81,7 +81,7 @@ const StaticText = styled.div`
     max-width: 100%;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 767px) {
     margin-top: 0px;
     padding-top: 0px;
   }
@@ -107,7 +107,7 @@ const CanvasContainer = styled.div`
     height: 400px;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 767px) {
     margin-top: 0px;
     padding-top: 0px;
     margin-bottom: 200px;
