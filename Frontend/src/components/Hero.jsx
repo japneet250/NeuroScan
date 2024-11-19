@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Navbar from "./Navbar";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
-import { FaArrowRight } from 'react-icons/fa';
 
 const Section = styled.div`
   height: 100vh;
@@ -33,7 +32,7 @@ const Container = styled.div`
     justify-content: center;
   }
 
-  @media (max-width: 480px){
+  @media (max-width: 767px) {
     margin-top : 0px;
   
   
@@ -70,9 +69,8 @@ const Left = styled.div`
     margin-top: 100px;
   }
 
-  @media (max-width: 480px){
+  @media (max-width: 767px) {
     margin-top : 50px;
-  
   
   
   }
@@ -176,7 +174,7 @@ const Right = styled.div`
   @media only screen and (max-width: 1400px) {
     width: 100%;
 
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 767px) {
     margin-bottom: 0px;
   }
 
@@ -223,7 +221,7 @@ const Img = styled.img`
     height: 250px;
   }
 
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 767px) {
     margin-bottom: 5px;
   }
 
@@ -261,7 +259,7 @@ const Hero = () => {
       <Navbar />
       <Container>
         <Left>
-          <Title>Upload Brain Image ➡ Get Prediction</Title>
+          <Title>Upload Brain Image --> Get Prediction.</Title>
           <WhatWeDo>
             <Line src="./img/line.png" />
             <Subtitle>What we Do</Subtitle>
