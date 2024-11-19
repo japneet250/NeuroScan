@@ -29,6 +29,7 @@ const Wrapper = styled.div`
   @media (max-width: 767px) {
     margin: 0px;
     padding-top: 0px;
+    overflow-x: hidden;
   }
 `;
 
@@ -78,10 +79,13 @@ const StaticText = styled.div`
   }
 
   @media (max-width: 768px) {
-    font-size: 35px;
+    font-size: 30px;
     line-height: 1.2;
     max-width: 100%;
+    margin: 15px;
     margin-bottom: 50px;
+    overflow-x: hidden;
+    
   }
 
 `;
@@ -106,6 +110,7 @@ const CanvasContainer_new = styled.div`
 
   @media (max-width: 768px) {
     height: 400px;
+    overflow-x: hidden;
   }
 `;
 

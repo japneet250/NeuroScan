@@ -26,6 +26,7 @@ const Container = styled.div`
     margin-top: 400px;
     height: auto;
     margin-bottom: 400px;
+    overflow-x: hidden;
   }
 `;
 
@@ -39,6 +40,7 @@ const Left = styled.div`
   @media only screen and (max-width: 768px) {
     justify-content: center;
     margin-left: 0px;
+    overflow-x: hidden;
   }
 `;
 
@@ -55,6 +57,7 @@ const Form = styled.form`
   @media only screen and (max-width: 768px) {
     width: 300px;
     margin-left: 0px;
+    overflow-x: hidden;
   }
 `;
 
@@ -90,6 +93,7 @@ const Right = styled.div`
   @media only screen and (max-width: 768px) {
     display: none;
     margin-left: 0px;
+    overflow-x: hidden;
   }
 `;
 

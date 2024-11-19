@@ -21,7 +21,8 @@ const Container = styled.div`
   }
 
   @media (max-width: 767px) {
-    margin-top: 60px;
+    margin-top: 80px;
+    overflow-x: hidden;
 
   }
 
@@ -37,6 +38,7 @@ const Title = styled.h1`
   @media (max-width: 768px) {
     font-size: 50px;
     margin-bottom: 50px;
+    overflow-x: hidden;
   }
 `;
 
@@ -53,6 +55,7 @@ const UploadSection = styled.div`
     flex-direction: column;
     align-items: center;
     height: 1500px;
+    overflow-x: hidden;
     
   }
 `;
@@ -84,9 +87,10 @@ const RightSection = styled.div`
   }
 
   @media (max-width: 768px) {
-    height: 100%;
-    width: 90%;
+    height: 500px;
+    width: 500px;
     margin : 50px;
+    overflow-x: hidden;
 
     
     
@@ -111,9 +115,10 @@ const LeftSection = styled.div`
   }
 
  @media (max-width: 768px) {
-    height: 100%;
-    width: 90%;
+    height: 500px;
+    width: 500px;
     margin : 50px;
+    overflow-x: hidden;
   }
 `;
 
@@ -136,9 +141,10 @@ const DropZone = styled.div`
   }
 
   @media (max-width: 768px) {
-    height: 500px;
-    width: 500px; 
-    margin-top: 40px;
+    height: 400px;
+    width: 400px; 
+    margin : auto;
+    overflow-x: hidden;
   }
   }
 `;
@@ -172,8 +178,9 @@ const ImagePreview = styled.div`
 
   @media (max-width: 768px) {
   img{
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
+    overflow-x: hidden;
       }
     
   }
@@ -196,6 +203,7 @@ const Heading = styled.h2`
 
   @media (max-width: 768px) {
     font-size: 32px;
+    overflow-x: hidden;
   }
 `;
 
@@ -207,13 +215,15 @@ const Form = styled.form`
 
   @media (max-width: 768px) {
     padding: 0 10px;
+    overflow-x: hidden;
   }
 `;
 
 const Label = styled.label`
   @media (max-width: 768px) {
-    font-size: 25px;
-    margin: 20px;
+    font-size: 20px;
+    overflow-x: hidden;
+    
   }
   
 `;
@@ -226,7 +236,8 @@ const InfoIcon = styled(AiOutlineInfoCircle)`
   align-items: center;
 
   @media (max-width: 768px) {
-    scale: 1.3;
+    scale: 1.2;
+    overflow-x: hidden;
     
   }
 `;
@@ -247,6 +258,7 @@ const Tooltip = styled.div`
   @media (max-width: 768px) {
     width: 90%;
     font-size: 20px;
+    overflow-x: hidden;
     
   }
 `;
@@ -257,8 +269,10 @@ const Checkbox = styled.input`
   height: 24px;
 
   @media (max-width: 768px) {
-    scale: 1.3;
-    margin-left: 150px;
+    scale: 1.2;
+    margin-left: 100px;
+    overflow-x: hidden;
+}
 `;
 
 const PersonalInfoSection = styled.div`
@@ -275,7 +289,9 @@ const PersonalInfoSection = styled.div`
     width: 80%;
     padding-right: 40px;
     margin-left : 30px;
+    overflow-x: hidden;
   }
+
 `;
 
 const Input = styled.input`
@@ -290,6 +306,7 @@ const Input = styled.input`
 
   @media (max-width: 768px) {
     font-size: 25px;
+    overflow-x: hidden;
     
   }
 `;
@@ -318,8 +335,9 @@ const Button = styled.button`
     font-size: 22px;
     padding: 15px;
     align-items: center;
-    width: 300px;
-    margin-left: 170px;
+    width: 200px;
+    margin-left: 140px;
+    overflow-x: hidden;
   }
 `;
 
@@ -331,6 +349,7 @@ const Result = styled.h3`
 
   @media (max-width: 768px) {
     font-size: 30px;
+    overflow-x: hidden;
   }
 `;
 
@@ -355,6 +374,7 @@ const InstructionsButton = styled.button`
     position: static;
     margin-top: 50px;
     scale: 1.3;
+    overflow-x: hidden;
   }
 `;
 
@@ -383,6 +403,7 @@ const ModalContent = styled.div`
 
   @media (max-width: 768px) {
     padding: 20px;
+    overflow-x: hidden;
   }
 `;
 
@@ -393,6 +414,7 @@ const InstructionsTitle = styled.h2`
 
   @media (max-width: 768px) {
     font-size: 1.3rem;
+    overflow-x: hidden;
   }
 `;
 
@@ -407,6 +429,7 @@ const InstructionsList = styled.ul`
   @media (max-width: 768px) {
     font-size: 0.9rem;
     padding-left: 15px;
+    overflow-x: hidden;
   }
 `;
 
@@ -438,6 +461,7 @@ const ImageBox = styled.div`
 
   @media (max-width: 768px) {
     margin-bottom: 15px;
+    overflow-x: hidden;
   }
 `;
 
