@@ -485,10 +485,8 @@ const CloseButton = styled.button`
 
 const Upload = () => {
 
-  const isSmallScreen = useMediaQuery({ query: "(max-width: 1000px)" });
-
   const [file, setFile] = useState(null);
-  const [anonymous, setAnonymous] = useState(isSmallScreen);
+  const [anonymous, setAnonymous] = useState(anonymous);
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [country, setCountry] = useState("");
