@@ -30,7 +30,14 @@ const Wrapper = styled.div`
     margin: 0px;
     padding-top: 0px;
     overflow-x: hidden;
+    
   }
+
+  @media (max-width: 450px) {
+    margin: 0px;
+    padding-top: 0px;
+    overflow-x: hidden;
+
 `;
 
 const TextContainer = styled.div`
@@ -88,6 +95,16 @@ const StaticText = styled.div`
     
   }
 
+  @media (max-width: 450px) {
+    font-size: 22.5px;
+    line-height: 1.2;
+    max-width: 100%;
+    margin: 15px;
+    margin-bottom: 37.5px;
+    overflow-x: hidden;
+    
+  }
+
 `;
 
 const CanvasContainer_new = styled.div`
@@ -112,6 +129,11 @@ const CanvasContainer_new = styled.div`
     height: 400px;
     overflow-x: hidden;
   }
+
+  @media (max-width: 450px) {
+    height: 300px;
+    overflow-x: hidden;
+  }
 `;
 
 
@@ -119,6 +141,7 @@ const CanvasContainer_new = styled.div`
 const ProductDesign = () => {
   // Use media query to detect if the screen width is 480px or less
   const isMobile = useMediaQuery({ query: "(max-width: 768px)"  });
+  const isMobile_new = useMediaQuery({ query: "(max-width: 400px)"  });
 
   const isTab = useMediaQuery({query: "(max-width: 1200px)" });
 
@@ -134,7 +157,7 @@ const ProductDesign = () => {
           <Suspense fallback={null}>
             <Stage environment="city" intensity={0.6} center={false} adjustCamera={false}>
               {/* Dynamically adjust the scale based on screen size */}
-              <Shoe scale={isTab ? [3.0, 3.0,3.0] : isMobile ? [3.0, 3.0,3.0] : [2.5, 2.5, 2.5]} />
+              <Shoe scale={isMobile_new ? [2.5, 2.5,2.5] : isTab ? [3.0, 3.0,3.0] : isMobile ? [3.0, 3.0,3.0] : [2.5, 2.5, 2.5]} />
             </Stage>
             <OrbitControls enableZoom={false} autoRotate />
           </Suspense>

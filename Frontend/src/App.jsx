@@ -20,6 +20,8 @@ const Container = styled.div`
   &::-webkit-scrollbar{
     display: none;
   }
+
+
 `;
 
 

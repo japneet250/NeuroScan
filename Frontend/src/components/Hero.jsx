@@ -17,6 +17,8 @@ const Section = styled.div`
     height: auto;
     
   }
+
+  
 `;
 
 const Container = styled.div`
@@ -35,6 +37,10 @@ const Container = styled.div`
 
   @media only screen and (max-width: 768px) {
     margin-top : 60px;
+  }
+
+  @media only screen and (max-width: 450px) {
+    margin-top : 45px;
   }
 `;
 
@@ -60,6 +66,10 @@ const Left = styled.div`
   @media only screen and (max-width: 768px) {
     width: 600px;
   }
+
+  @media only screen and (max-width: 450px) {
+    width: 450px;
+  }
 `;
 
 const Title = styled.h1`
@@ -78,6 +88,12 @@ const Title = styled.h1`
     font-size: 60px;
     margin-top: 0px;
     margin-bottom: 50px;
+  }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 45px;
+    margin-top: 0px;
+    margin-bottom: 37.5px;
   }
 
 `;
@@ -120,6 +136,15 @@ const Desc = styled.p`
     margin-top: 30px;
   }
 
+  @media only screen and (max-width: 450px) {
+    font-size: 22.5px;
+    padding: 7.5px;
+    align-items: center;
+    margin-left: 37.5px;
+    margin-bottom: 37.5px;
+    margin-top: 22.5px;
+  }
+
 `;
 
 const Button = styled.button`
@@ -146,6 +171,11 @@ const Button = styled.button`
     padding: 20px;
     font-size: 16px;
   }
+
+  @media only screen and (max-width: 450px) {
+    padding: 15px;
+    font-size: 12px;
+  }
 `;
 
 const Right = styled.div`
@@ -157,6 +187,10 @@ const Right = styled.div`
     height: 100%;
 
   @media only screen and(max-width: 767px) {
+    margin-bottom: 0px;
+  }
+
+  @media only screen and(max-width: 450px) {
     margin-bottom: 0px;
   }
 
@@ -199,6 +233,13 @@ const Img = styled.img`
     height: 600px;
   }
 
+  @media only screen and (max-width: 450px) {
+    width: 400x;
+    height: 400px;
+    margin-right: -50px;
+    
+  }
+
   
   @keyframes animate {
     to {
@@ -226,6 +267,13 @@ const CanvasContainer = styled.div`
     height: 750px; 
     margin: auto;
     margin-top: -60px;
+  }
+
+  @media (max-width: 450px) {
+    width: auto;
+    height: 562.5px; 
+    margin: auto;
+    margin-top: -45px;
   }
 `;
 

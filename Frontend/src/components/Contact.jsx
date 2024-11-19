@@ -9,6 +9,12 @@ const Section = styled.div`
   @media only screen and (max-width: 768px) {
     scale: 1.4;
     height: auto;
+  }
+
+  @media only screen and (max-width: 450px) {
+    scale: 1.05; /* 75% of 1.4 */
+    height: auto;
+  }
 `;
 
 const Container = styled.div`
@@ -18,14 +24,19 @@ const Container = styled.div`
   justify-content: space-between;
   gap: 50px;
 
-  @media only screen and (max-width: 1200px) {
-  }
+  @media only screen and (max-width: 1200px) {}
 
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     margin-left: 0px;
     margin-top: 400px;
     height: auto;
     margin-bottom: 400px;
+    overflow-x: hidden;
+  }
+
+  @media (max-width: 450px) {
+    margin-top: 100px; /* 75% of 400px */
+    margin-bottom: 100px; /* 75% of 400px */
     overflow-x: hidden;
   }
 `;
@@ -42,10 +53,18 @@ const Left = styled.div`
     margin-left: 0px;
     overflow-x: hidden;
   }
+
+  @media only screen and (max-width: 450px) {
+    overflow-x: hidden;
+  }
 `;
 
 const Title = styled.h1`
   font-weight: 200;
+
+  @media (max-width: 450px) {
+    font-size: 18px; /* Optional scaling */
+  }
 `;
 
 const Form = styled.form`
@@ -59,6 +78,12 @@ const Form = styled.form`
     margin-left: 0px;
     overflow-x: hidden;
   }
+
+  @media only screen and (max-width: 450px) {
+    width: 225px; /* 75% of 300px */
+    gap: 18.75px; /* 75% of 25px */
+    overflow-x: hidden;
+  }
 `;
 
 const Input = styled.input`
@@ -66,6 +91,10 @@ const Input = styled.input`
   background-color: #e8e6e6;
   border: none;
   border-radius: 5px;
+
+  @media only screen and (max-width: 450px) {
+    padding: 15px; /* 75% of 20px */
+  }
 `;
 
 const TextArea = styled.textarea`
@@ -73,6 +102,10 @@ const TextArea = styled.textarea`
   border: none;
   border-radius: 5px;
   background-color: #e8e6e6;
+
+  @media only screen and (max-width: 450px) {
+    padding: 15px; /* 75% of 20px */
+  }
 `;
 
 const Button = styled.button`
@@ -83,16 +116,22 @@ const Button = styled.button`
   cursor: pointer;
   border-radius: 5px;
   padding: 20px;
+
+  @media only screen and (max-width: 450px) {
+    padding: 15px; /* 75% of 20px */
+  }
 `;
 
 const Right = styled.div`
   flex: 1;
 
-  
-
   @media only screen and (max-width: 768px) {
     display: none;
     margin-left: 0px;
+    overflow-x: hidden;
+  }
+
+  @media only screen and (max-width: 450px) {
     overflow-x: hidden;
   }
 `;

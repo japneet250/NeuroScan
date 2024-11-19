@@ -23,9 +23,12 @@ const Container = styled.div`
   @media (max-width: 767px) {
     margin-top: 80px;
     overflow-x: hidden;
-
   }
 
+  @media (max-width: 450px) {
+    margin-top: 60px; /* 75% of 80px */
+    overflow-x: hidden;
+  }
 `;
 
 const Title = styled.h1`
@@ -38,6 +41,12 @@ const Title = styled.h1`
   @media (max-width: 768px) {
     font-size: 50px;
     margin-bottom: 50px;
+    overflow-x: hidden;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 37.5px; /* 75% of 50px */
+    margin-bottom: 37.5px; /* 75% of 50px */
     overflow-x: hidden;
   }
 `;
@@ -56,7 +65,13 @@ const UploadSection = styled.div`
     align-items: center;
     height: 1500px;
     overflow-x: hidden;
-    
+  }
+
+  @media (max-width: 450px) {
+    flex-direction: column;
+    align-items: center;
+    height: 1400px; /* 75% of 1500px */
+    overflow-x: hidden;
   }
 `;
 
@@ -89,13 +104,19 @@ const RightSection = styled.div`
   @media (max-width: 768px) {
     height: 500px;
     width: 500px;
-    margin : 50px;
+    margin: 50px;
     overflow-x: hidden;
+  }
 
-    
-    
+  @media (max-width: 450px) {
+    height: 375px; /* 75% of 500px */
+    width: 375px; /* 75% of 500px */
+    margin: 37.5px; /* 75% of 50px */
+    overflow-x: hidden;
   }
 `;
+
+
 
 const LeftSection = styled.div`
   flex: 1;
@@ -108,16 +129,23 @@ const LeftSection = styled.div`
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
   border: 1px solid #2A1B3D;
 
-  @media only screen and (max-width: 1200px) {
+  @media (max-width: 1200px) {
     height: 500px;
     width: 500px;
     padding: 20px 10px;
   }
 
- @media (max-width: 768px) {
+  @media (max-width: 768px) {
     height: 500px;
     width: 500px;
-    margin : 50px;
+    margin: 50px;
+    overflow-x: hidden;
+  }
+
+  @media (max-width: 450px) {
+    height: 375px; /* 75% of 500px */
+    width: 375px;
+    margin: 37.5px;
     overflow-x: hidden;
   }
 `;
@@ -134,7 +162,7 @@ const DropZone = styled.div`
   position: relative;
   margin-top: 40px;
 
-  @media only screen and (max-width: 1200px) {
+  @media (max-width: 1200px) {
     height: 400px;
     width: 400px;
     margin-top: 40px;
@@ -142,16 +170,22 @@ const DropZone = styled.div`
 
   @media (max-width: 768px) {
     height: 400px;
-    width: 400px; 
-    margin : auto;
+    width: 400px;
+    margin: auto;
     overflow-x: hidden;
   }
+
+  @media (max-width: 450px) {
+    height: 300px; /* 75% of 400px */
+    width: 300px;
+    margin: auto;
+    overflow-x: hidden;
   }
 `;
 
 const ImagePreview = styled.div`
   position: relative;
-  
+
   img {
     width: 500px;
     height: 500px;
@@ -159,7 +193,7 @@ const ImagePreview = styled.div`
     margin-bottom: 20px;
     object-fit: cover;
   }
-  
+
   .delete-icon {
     position: absolute;
     top: 10px;
@@ -169,22 +203,29 @@ const ImagePreview = styled.div`
     cursor: pointer;
   }
 
-  @media only screen and (max-width: 1200px) {
-  img{
-    height: 300px;
-    width: 300px;
-      }
+  @media (max-width: 1200px) {
+    img {
+      height: 300px;
+      width: 300px;
+    }
   }
 
   @media (max-width: 768px) {
-  img{
-    height: 300px;
-    width: 300px;
-    overflow-x: hidden;
-      }
-    
+    img {
+      height: 300px;
+      width: 300px;
+      overflow-x: hidden;
+    }
+  }
+
+  @media (max-width: 450px) {
+    img {
+      height: 225px; /* 75% of 300px */
+      width: 225px;
+    }
   }
 `;
+
 
 const FormContainer = styled.div`
   text-align: center;
@@ -192,6 +233,10 @@ const FormContainer = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
+  }
+
+  @media (max-width: 450px) {
+    width: 75%; /* 75% of 100% */
   }
 `;
 
@@ -203,6 +248,11 @@ const Heading = styled.h2`
 
   @media (max-width: 768px) {
     font-size: 32px;
+    overflow-x: hidden;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 24px; /* 75% of 32px */
     overflow-x: hidden;
   }
 `;
@@ -217,15 +267,24 @@ const Form = styled.form`
     padding: 0 10px;
     overflow-x: hidden;
   }
+
+  @media (max-width: 450px) {
+    padding: 0 7.5px; /* 75% of 10px */
+    overflow-x: hidden;
+    margin-top: 20px;
+  }
 `;
 
 const Label = styled.label`
   @media (max-width: 768px) {
     font-size: 20px;
     overflow-x: hidden;
-    
   }
-  
+
+  @media (max-width: 450px) {
+    font-size: 18px; /* 75% of 20px */
+    overflow-x: hidden;
+  }
 `;
 
 const InfoIcon = styled(AiOutlineInfoCircle)`
@@ -238,7 +297,11 @@ const InfoIcon = styled(AiOutlineInfoCircle)`
   @media (max-width: 768px) {
     scale: 1.2;
     overflow-x: hidden;
-    
+  }
+
+  @media (max-width: 450px) {
+    scale: 0.9; /* 75% of 1.2 */
+    overflow-x: hidden;
   }
 `;
 
@@ -259,7 +322,12 @@ const Tooltip = styled.div`
     width: 90%;
     font-size: 20px;
     overflow-x: hidden;
-    
+  }
+
+  @media (max-width: 450px) {
+    width: 67.5%; /* 75% of 90% */
+    font-size: 15px; /* 75% of 20px */
+    overflow-x: hidden;
   }
 `;
 
@@ -272,7 +340,13 @@ const Checkbox = styled.input`
     scale: 1.2;
     margin-left: 100px;
     overflow-x: hidden;
-}
+  }
+
+  @media (max-width: 450px) {
+    scale: 0.9; /* 75% of 1.2 */
+    margin-left: 10px; /* 75% of 100px */
+    overflow-x: hidden;
+  }
 `;
 
 const PersonalInfoSection = styled.div`
@@ -288,11 +362,21 @@ const PersonalInfoSection = styled.div`
   @media (max-width: 768px) {
     width: 80%;
     padding-right: 40px;
-    margin-left : 30px;
+    margin-left: 30px;
     overflow-x: hidden;
   }
 
+  @media (max-width: 450px) {
+    width: 60%; /* 75% of 80% */
+    padding-right: 30px; /* 75% of 40px */
+    margin-left: 22.5px; /* 75% of 30px */
+    overflow-x: hidden;
+  }
 `;
+
+
+
+
 
 const Input = styled.input`
   padding: 12px;
@@ -307,7 +391,11 @@ const Input = styled.input`
   @media (max-width: 768px) {
     font-size: 25px;
     overflow-x: hidden;
-    
+  }
+
+  @media (max-width: 450px) {
+    font-size: 18.75px; /* 75% of 25px */
+    overflow-x: hidden;
   }
 `;
 
@@ -326,17 +414,23 @@ const Button = styled.button`
     background-color: #45a049;
   }
 
-  @media (max-width: 1200px) {
-   
+  @media (max-width: 1200px) {}
 
-}
-    
   @media (max-width: 768px) {
+
     font-size: 22px;
     padding: 15px;
     align-items: center;
     width: 200px;
     margin-left: 140px;
+    overflow-x: hidden;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 16.5px; /* 75% of 22px */
+    padding: 11.25px; /* 75% of 15px */
+    width: 150px; /* 75% of 200px */
+    margin-left: 60px; /* 75% of 140px */
     overflow-x: hidden;
   }
 `;
@@ -349,6 +443,11 @@ const Result = styled.h3`
 
   @media (max-width: 768px) {
     font-size: 30px;
+    overflow-x: hidden;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 22.5px; /* 75% of 30px */
     overflow-x: hidden;
   }
 `;
@@ -365,7 +464,6 @@ const InstructionsButton = styled.button`
   border-radius: 5px;
   cursor: pointer;
 
-
   @media (max-width: 1200px) {
     bottom: 10px;
   }
@@ -374,6 +472,12 @@ const InstructionsButton = styled.button`
     position: static;
     margin-top: 50px;
     scale: 1.3;
+    overflow-x: hidden;
+  }
+
+  @media (max-width: 450px) {
+    margin-top: 37.5px; /* 75% of 50px */
+    scale: 0.975; /* 75% of 1.3 */
     overflow-x: hidden;
   }
 `;
@@ -405,6 +509,11 @@ const ModalContent = styled.div`
     padding: 20px;
     overflow-x: hidden;
   }
+
+  @media (max-width: 450px) {
+    padding: 15px; /* 75% of 20px */
+    overflow-x: hidden;
+  }
 `;
 
 const InstructionsTitle = styled.h2`
@@ -414,6 +523,11 @@ const InstructionsTitle = styled.h2`
 
   @media (max-width: 768px) {
     font-size: 1.3rem;
+    overflow-x: hidden;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 0.975rem; /* 75% of 1.3rem */
     overflow-x: hidden;
   }
 `;
@@ -429,6 +543,12 @@ const InstructionsList = styled.ul`
   @media (max-width: 768px) {
     font-size: 0.9rem;
     padding-left: 15px;
+    overflow-x: hidden;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 0.675rem; /* 75% of 0.9rem */
+    padding-left: 11.25px; /* 75% of 15px */
     overflow-x: hidden;
   }
 `;
@@ -461,6 +581,11 @@ const ImageBox = styled.div`
 
   @media (max-width: 768px) {
     margin-bottom: 15px;
+    overflow-x: hidden;
+  }
+
+  @media (max-width: 450px) {
+    margin-bottom: 11.25px; /* 75% of 15px */
     overflow-x: hidden;
   }
 `;

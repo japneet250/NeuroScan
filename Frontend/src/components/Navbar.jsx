@@ -6,6 +6,7 @@ const Section = styled.div`
   display: flex;
   width: 100%;
   z-index: 1;
+
 `;
 
 const Container = styled.div`
@@ -24,10 +25,19 @@ const Container = styled.div`
   background: url("./img/bg.jpeg");
 
   @media only screen and (max-width: 768px) {
+
     flex-direction: row;
     align-items: center;
     padding-top: 20px;
     padding: 10px;
+  }
+
+  @media only screen and (max-width: 450px) {
+
+    flex-direction: row;
+    align-items: center;
+    padding-top: 15px;
+    padding: 7.5px;
   }
 `;
 
@@ -38,6 +48,10 @@ const Links = styled.div`
   flex-grow: 1;
 
   @media only screen and (max-width: 768px) {
+    display: none;
+  }
+
+  @media only screen and (max-width: 450px) {
     display: none;
   }
 `;
@@ -55,6 +69,11 @@ const Logo = styled.img`
     width: 250px;
     left : 10px;
   }
+
+  @media only screen and (max-width: 450px) {
+    width: 187.5px;
+    left : 7.5px;
+  }
 `;
 
 const List = styled.ul`
@@ -66,11 +85,22 @@ const List = styled.ul`
   margin-left: auto;
 
   @media only screen and (max-width: 768px) {
+
     flex-direction: column;
     align-items: center;
     gap: 10px;
     margin-left: 0;
   }
+
+  @media only screen and (max-width: 450px) {
+
+    flex-direction: column;
+    align-items: center;
+    gap: 7.5px;
+    margin-left: 0;
+  }
+
+
 `;
 
 const ListItem = styled.li`
@@ -87,6 +117,10 @@ const ListItem = styled.li`
   @media only screen and (max-width: 768px) {
     font-size: 16px;
   }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 12px;
+  }
 `;
 
 const Icons = styled.div`
@@ -95,6 +129,10 @@ const Icons = styled.div`
   gap: 20px;
 
   @media only screen and (max-width: 768px) {
+    display: none;
+  }
+
+  @media only screen and (max-width: 450px) {
     display: none;
   }
 `;
@@ -116,8 +154,15 @@ const Button = styled.button`
   }
 
   @media only screen and (max-width: 768px) {
+
     width: 100px;
     font-size: 12px;
+  }
+
+  @media only screen and (max-width: 450px) {
+
+    width: 75px;
+    font-size: 9px;
   }
 `;
 
@@ -131,6 +176,12 @@ const MenuButton = styled.div`
     display: flex;
     align-items: center;
     margin-right: 20px;
+  }
+
+  @media only screen and (max-width: 450px) {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
   }
 `;
 
@@ -147,7 +198,13 @@ const DropdownMenu = styled.div`
   z-index: 1000;
 
   @media only screen and (max-width: 768px) {
+    }
     width: 90%;
+  }
+
+  @media only screen and (max-width: 450px) {
+    }
+    width: 67.5%;
   }
 `;
 
@@ -178,6 +235,11 @@ const ModalContent = styled.div`
 
   @media only screen and (max-width: 768px) {
     width: 90%;
+  }
+
+  @media only screen and (max-width: 450px) {
+    }
+    width: 67.5%;
   }
 `;
 
@@ -220,8 +282,15 @@ const Question = styled.div`
   box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.4);
 
   @media only screen and (max-width: 768px) {
+
     font-size: 16px;
     padding: 12px;
+  }
+
+  @media only screen and (max-width: 450px) {
+
+    font-size: 12px;
+    padding: 9px;
   }
 `;
 
@@ -236,6 +305,10 @@ const Answer = styled.div`
   @media only screen and (max-width: 768px) {
     font-size: 14px;
   }
+
+  @media only screen and (max-width: 768px) {
+    font-size: 10.5px;
+  }  
 `;
 
 const Navbar = () => {
