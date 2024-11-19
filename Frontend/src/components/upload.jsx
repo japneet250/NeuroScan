@@ -12,12 +12,17 @@ const Container = styled.div`
   background: rgba(255, 255, 255, 0);
   flex-direction: column;
 
+  @media only screen and (max-width: 1400px) {
+    margin-top: -300px;
+  }
+
   @media only screen and (max-width: 1200px) {
-    margin-top: 250px;
+    margin-top: 50px;
   }
 
   @media (max-width: 767px) {
-    margin-top: 20px;
+    margin-top: 60px;
+
   }
 
 `;
@@ -30,8 +35,8 @@ const Title = styled.h1`
   text-align: center;
 
   @media (max-width: 768px) {
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 50px;
+    margin-bottom: 50px;
   }
 `;
 
@@ -47,6 +52,8 @@ const UploadSection = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
+    height: 1500px;
+    
   }
 `;
 
@@ -72,15 +79,17 @@ const RightSection = styled.div`
     height: 500px;
     width: 500px;
     padding: 20px 10px;
+    margin-bottom: 50px;
+    border-right: none;
   }
 
   @media (max-width: 768px) {
-    height: 300px;
-    width: 300px;
-    padding: 20px 10px;
-    margin-bottom : 30px;
-    margin-top : 30px;
-    border : None;
+    height: 100%;
+    width: 90%;
+    margin : 50px;
+
+    
+    
   }
 `;
 
@@ -101,10 +110,10 @@ const LeftSection = styled.div`
     padding: 20px 10px;
   }
 
-  @media (max-width: 768px) {
-    height: 300px;
-    width: 300px;
-    padding: 20px 10px;
+ @media (max-width: 768px) {
+    height: 100%;
+    width: 90%;
+    margin : 50px;
   }
 `;
 
@@ -127,8 +136,8 @@ const DropZone = styled.div`
   }
 
   @media (max-width: 768px) {
-    height: 300px;
-    width: 300px;
+    height: 500px;
+    width: 500px; 
     margin-top: 40px;
   }
   }
@@ -162,10 +171,11 @@ const ImagePreview = styled.div`
   }
 
   @media (max-width: 768px) {
-    img {
-      width: 200px;
-      height: 200px;
-    }
+  img{
+    height: 400px;
+    width: 400px;
+      }
+    
   }
 `;
 
@@ -185,7 +195,7 @@ const Heading = styled.h2`
   color: white;
 
   @media (max-width: 768px) {
-    font-size: 24px;
+    font-size: 32px;
   }
 `;
 
@@ -201,11 +211,11 @@ const Form = styled.form`
 `;
 
 const Label = styled.label`
-  display: flex;
-  align-items: center;
-  font-size: 20px;
-  color: #ffffff;
-  margin-bottom: 10px;
+  @media (max-width: 768px) {
+    font-size: 25px;
+    margin: 20px;
+  }
+  
 `;
 
 const InfoIcon = styled(AiOutlineInfoCircle)`
@@ -214,6 +224,11 @@ const InfoIcon = styled(AiOutlineInfoCircle)`
   cursor: pointer;
   display: flex;
   align-items: center;
+
+  @media (max-width: 768px) {
+    scale: 1.3;
+    
+  }
 `;
 
 const Tooltip = styled.div`
@@ -231,6 +246,8 @@ const Tooltip = styled.div`
 
   @media (max-width: 768px) {
     width: 90%;
+    font-size: 20px;
+    
   }
 `;
 
@@ -238,6 +255,10 @@ const Checkbox = styled.input`
   margin-right: 10px;
   width: 24px;
   height: 24px;
+
+  @media (max-width: 768px) {
+    scale: 1.3;
+    margin-left: 150px;
 `;
 
 const PersonalInfoSection = styled.div`
@@ -251,8 +272,8 @@ const PersonalInfoSection = styled.div`
   padding-right: 40px;
 
   @media (max-width: 768px) {
-    width: 50%;
-    padding-right: 30px;
+    width: 80%;
+    padding-right: 40px;
     margin-left : 30px;
   }
 `;
@@ -268,7 +289,8 @@ const Input = styled.input`
   width: 100%;
 
   @media (max-width: 768px) {
-    padding: 6px;
+    font-size: 25px;
+    
   }
 `;
 
@@ -287,11 +309,17 @@ const Button = styled.button`
     background-color: #45a049;
   }
 
+  @media (max-width: 1200px) {
+   
+
+}
+    
   @media (max-width: 768px) {
-    font-size: 18px;
-    padding: 12px;
-    width : 200px;
-    margin-left : 40px;
+    font-size: 22px;
+    padding: 15px;
+    align-items: center;
+    width: 300px;
+    margin-left: 170px;
   }
 `;
 
@@ -302,7 +330,7 @@ const Result = styled.h3`
   font-weight: bold;
 
   @media (max-width: 768px) {
-    font-size: 20px;
+    font-size: 30px;
   }
 `;
 
@@ -318,9 +346,15 @@ const InstructionsButton = styled.button`
   border-radius: 5px;
   cursor: pointer;
 
+
+  @media (max-width: 1200px) {
+    bottom: 10px;
+  }
+
   @media (max-width: 768px) {
     position: static;
-    margin-top: 20px;
+    margin-top: 50px;
+    scale: 1.3;
   }
 `;
 
@@ -514,7 +548,7 @@ const Upload = () => {
                   checked={anonymous}
                   onChange={() => setAnonymous(!anonymous)}
                 />
-                <label htmlFor="anonymous-checkbox">Submit Anonymously</label>
+                <Label htmlFor="anonymous-checkbox">Submit Anonymously</Label>
                 <InfoIcon onClick={() => setShowTooltip(!showTooltip)} />
               </span>
               {showTooltip && (

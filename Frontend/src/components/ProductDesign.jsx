@@ -14,12 +14,15 @@ const Wrapper = styled.div`
   
 
   @media (max-width: 1400px) {
-    margin-top: 150px;
+    margin-top: 0px;
+    height: 800px;
+    margin-top: -50px;
+    
   }
 
   @media (max-width: 1200px) {
     flex-direction: column;
-    height: 1000px;
+    height: 800px;
     padding: 20px 0;
   }
 
@@ -36,25 +39,24 @@ const TextContainer = styled.div`
   justify-content: center;
   padding: 10px;
 
-  @media (max-width: 1200px) {
+
+  @media (max-width: 1400px) {
     padding: 20px;
-    flex: 1.7;
+    height: 400px;
+    width: 800px;
   }
 
-  @media (max-width: 768px) {
-    flex: 1;
+  @media (max-width: 1200px) {
+    padding: 0px;
+    height: auto;
+    width: auto;
   }
 
-  @media (max-width: 767px) {
-    margin: 0px;
-    padding-top: 0px;
-    
-    
-  }
+
 `;
 
 const StaticText = styled.div`
-  font-size: 25px;
+  font-size: 27px;
   color: #ffffff;
   font-weight: bold;
   font-family: "Cursive";
@@ -62,57 +64,48 @@ const StaticText = styled.div`
   text-align: left;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   line-height: 1.4;
+  padding: 20px;
 
   @media (max-width: 1400px) {
-    font-size: 22px;
-    padding: 12px;
+    font-size: 24px;
+    padding: 10px;
   }
 
   @media (max-width: 1200px) {
-    font-size: 22px;
+    font-size: 26px;
     text-align: center;
     max-width: 90%;
-    margin-top: 300px;
   }
 
   @media (max-width: 768px) {
-    font-size: 20px;
+    font-size: 35px;
     line-height: 1.2;
     max-width: 100%;
+    margin-bottom: 50px;
   }
 
-  @media (max-width: 767px) {
-    margin-top: 0px;
-    padding-top: 0px;
-  }
 `;
 
-const CanvasContainer = styled.div`
+const CanvasContainer_new = styled.div`
   flex: 2;
   position: relative;
   margin-right: 120px;
 
   @media (max-width: 1400px) {
-    margin-top: 100px;
-    width: 100%;
-    height: 700px;
+    width: 70%;
+    height: 70%;
+    margin-right: 50px;
+    margin-top: -50px;
   }
 
   @media (max-width: 1200px) {
     width: 100%;
-    height: 500px;
+    height: 100%;
+  
   }
 
   @media (max-width: 768px) {
     height: 400px;
-  }
-
-  @media (max-width: 767px) {
-    margin-top: 0px;
-    padding-top: 0px;
-    margin-bottom: 200px;
-    
-    
   }
 `;
 
@@ -120,7 +113,9 @@ const CanvasContainer = styled.div`
 
 const ProductDesign = () => {
   // Use media query to detect if the screen width is 480px or less
-  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)"  });
+
+  const isTab = useMediaQuery({query: "(max-width: 1200px)" });
 
   return (
     <Wrapper>
@@ -129,17 +124,17 @@ const ProductDesign = () => {
           "Explore our interactive 3D brain model with a simple click-and-drag—revealing the intricate details that power our AI’s 98% accuracy in tumor detection and 94% accuracy in identifying tumor types. Rotate to uncover how each brain region contributed to our CNN training, refined by over 5,000 medical images, ensuring unmatched precision in every diagnosis."
         </StaticText>
       </TextContainer>
-      <CanvasContainer>
+      <CanvasContainer_new>
         <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
           <Suspense fallback={null}>
             <Stage environment="city" intensity={0.6} center={false} adjustCamera={false}>
               {/* Dynamically adjust the scale based on screen size */}
-              <Shoe scale={isMobile ? [1.5, 1.5, 1.5] : [2.5, 2.5, 2.5]} />
+              <Shoe scale={isTab ? [3.0, 3.0,3.0] : isMobile ? [3.0, 3.0,3.0] : [2.5, 2.5, 2.5]} />
             </Stage>
             <OrbitControls enableZoom={false} autoRotate />
           </Suspense>
         </Canvas>
-      </CanvasContainer>
+      </CanvasContainer_new>
     </Wrapper>
   );
 };

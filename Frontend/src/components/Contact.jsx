@@ -5,6 +5,10 @@ import Map from "./Map";
 const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
+
+  @media only screen and (max-width: 768px) {
+    scale: 1.4;
+    height: auto;
 `;
 
 const Container = styled.div`
@@ -15,12 +19,13 @@ const Container = styled.div`
   gap: 50px;
 
   @media only screen and (max-width: 1200px) {
-    margin-left: 40px;
   }
 
   @media (max-width: 767px) {
     margin-left: 0px;
-    margin-bottom: 100px;
+    margin-top: 400px;
+    height: auto;
+    margin-bottom: 400px;
   }
 `;
 
@@ -29,6 +34,8 @@ const Left = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  margin-left: 50px;
+
   @media only screen and (max-width: 768px) {
     justify-content: center;
     margin-left: 0px;
@@ -78,6 +85,8 @@ const Button = styled.button`
 const Right = styled.div`
   flex: 1;
 
+  
+
   @media only screen and (max-width: 768px) {
     display: none;
     margin-left: 0px;
@@ -93,7 +102,7 @@ const Contact = () => {
 
     // Collect form data
     const formData = new FormData(e.target);
-    formData.append("access_key", "af43e4f0-a76c-4831-ba6f-81ac6ea55ffd");  // Replace with your Web3Forms API key
+    formData.append("access_key", "af43e4f0-a76c-4831-ba6f-81ac6ea55ffd");  
 
     // Submit to Web3Forms API
     try {

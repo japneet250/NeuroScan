@@ -14,7 +14,7 @@ const Section = styled.div`
 
   @media only screen and (max-width: 1400px) {
     height: auto;
-    padding: 20px 0;
+    
   }
 `;
 
@@ -26,17 +26,14 @@ const Container = styled.div`
 
   @media only screen and (max-width: 1400px) {
     margin-top : 120px;
-    width: 90%;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
-  @media (max-width: 767px) {
-    margin-top : 0px;
-  
-  
-  
+  @media only screen and (max-width: 768px) {
+    margin-top : 60px;
   }
 `;
 
@@ -48,7 +45,7 @@ const Left = styled.div`
   gap: 20px;
   margin: 20px;
 
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1400px) {
     align-items: center;
     scale: 0.9;
     margin: 0px;
@@ -60,19 +57,7 @@ const Left = styled.div`
   }
 
   @media only screen and (max-width: 768px) {
-    scale: 0.75;
-    margin-top: 0px;
-  }
-
-  @media only screen and (max-width: 576px) {
-    scale: 0.7;
-    margin-top: 100px;
-  }
-
-  @media (max-width: 767px) {
-    margin-top : 60px;
-  
-  
+    width: 600px;
   }
 `;
 
@@ -89,12 +74,11 @@ const Title = styled.h1`
   }
 
   @media only screen and (max-width: 768px) {
-    font-size: 48px;
+    font-size: 60px;
+    margin-top: 0px;
+    margin-bottom: 50px;
   }
 
-  @media only screen and (max-width: 576px) {
-    font-size: 42px;
-  }
 `;
 
 const WhatWeDo = styled.div`
@@ -117,8 +101,7 @@ const Desc = styled.p`
 
   @media only screen and (max-width: 1400px) {
     font-size: 22px;
-    padding: 20px;
-    padding-bottom: 0;
+    padding: 10px;
   }
 
   @media only screen and (max-width: 992px) {
@@ -128,16 +111,14 @@ const Desc = styled.p`
   }
 
   @media only screen and (max-width: 768px) {
-    font-size: 18px;
+    font-size: 30px;
     padding: 10px;
-    padding-bottom: 0;
+    align-items: center;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    margin-top: 30px;
   }
 
-  @media only screen and (max-width: 576px) {
-    font-size: 16px;
-    padding: 5px;
-    padding-bottom: 0;
-  }
 `;
 
 const Button = styled.button`
@@ -161,8 +142,8 @@ const Button = styled.button`
   }
 
   @media only screen and (max-width: 768px) {
-    padding: 8px;
-    font-size: 12px;
+    padding: 20px;
+    font-size: 16px;
   }
 `;
 
@@ -170,11 +151,11 @@ const Right = styled.div`
   flex: 3;
   position: relative;
   
-
   @media only screen and (max-width: 1400px) {
     width: 100%;
+    height: 100%;
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and(max-width: 767px) {
     margin-bottom: 0px;
   }
 
@@ -195,7 +176,8 @@ const Img = styled.img`
   @media only screen and (max-width: 1400px) {
     width: 600px;
     height: 450px;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     
     }
 
@@ -212,17 +194,8 @@ const Img = styled.img`
   }
 
   @media only screen and (max-width: 768px) {
-    width: 300px;
-    height: 300px;
-  }
-
-  @media only screen and (max-width: 576px) {
-    width: 250px;
-    height: 250px;
-  }
-
-  @media only screen and (max-width: 767px) {
-    margin-bottom: 5px;
+    width: 600x;
+    height: 600px;
   }
 
   
@@ -238,18 +211,25 @@ const CanvasContainer = styled.div`
   height: 100%;
   position: relative;
 
-  @media (max-width: 767px) {
+
+  @media (max-width: 1400px) {
+    width: 750px;
+    height: 750px;
+    padding-bottom: 0px;
+    margin: auto;
+    margin-top: -120px;
+  }
+
+  @media (max-width: 768px) {
     width: auto;
-    height: 450px; /* Set a specific height for mobile */
+    height: 750px; 
     margin: auto;
     margin-top: -60px;
   }
 `;
 
 const SphereContainer = styled(Sphere)`
-  @media (max-width: 480px) {
-    
-  }
+   
 `;
 
 
@@ -259,7 +239,7 @@ const Hero = () => {
       <Navbar />
       <Container>
         <Left>
-          <Title>Upload Brain Image --> Get Prediction.</Title>
+          <Title>Upload Brain Image : Get Prediction.</Title>
           <WhatWeDo>
             <Line src="./img/line.png" />
             <Subtitle>What we Do</Subtitle>

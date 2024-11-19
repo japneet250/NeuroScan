@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Contact from "./components/Contact";
 import Hero from "./components/Hero";
 import Who from "./components/Who";
-import Works from "./components/Works";
+import ProductDesign from "./components/ProductDesign";
 import Upload from "./components/upload";
 
 const Container = styled.div`
@@ -23,7 +23,7 @@ function App() {
     <Container>
       <Hero />
       {/* <Who /> */}
-      <Works />
+      <ProductDesign />
       <Upload />
       <Contact />
     </Container>
