@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import axios from "axios";
 import { AiOutlineInfoCircle, AiOutlineCloseCircle } from "react-icons/ai";
-import { useMediaQuery } from "react-responsive"; 
-
 
 const Container = styled.div`
   height: auto;
@@ -484,9 +482,8 @@ const CloseButton = styled.button`
 `;
 
 const Upload = () => {
-
   const [file, setFile] = useState(null);
-  const [anonymous, setAnonymous] = useState(anonymous);
+  const [anonymous, setAnonymous] = useState(false);
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [country, setCountry] = useState("");
@@ -498,6 +495,9 @@ const Upload = () => {
   const [showTooltip, setShowTooltip] = useState(false);
   const [predictionResult, setPredictionResult] = useState(null);
   const [predictionProbability, setPredictionProbability] = useState(null);
+
+
+  
 
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
@@ -548,6 +548,7 @@ const Upload = () => {
         },
       });
 
+
       const { prediction, probability } = response.data;
 
       setPredictionResult(prediction);
@@ -583,7 +584,7 @@ const Upload = () => {
                 </Tooltip>
               )}
 
-              {!anonymous && !isSmallScreen && (
+              {!anonymous && (
                 <PersonalInfoSection>
                   <Input
                     type="text"
