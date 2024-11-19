@@ -17,6 +17,11 @@ const Container = styled.div`
   @media only screen and (max-width: 1200px) {
     margin-left: 40px;
   }
+
+  @media only screen and (max-width: 450px) {
+    margin-left: 0px;
+    margin-bottom: 100px;
+  }
 `;
 
 const Left = styled.div`

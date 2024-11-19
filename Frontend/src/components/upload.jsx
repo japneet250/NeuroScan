@@ -16,6 +16,10 @@ const Container = styled.div`
     margin-top: 250px;
   }
 
+  @media only screen and (max-width: 450px) {
+    margin-top: 20px;
+  }
+
 `;
 
 const Title = styled.h1`
@@ -477,12 +481,12 @@ const Upload = () => {
     setError(null);
 
     try {
-
-      const response = await axios.post('https://test3n-858207113120.us-central1.run.app/predict', formData, { d6c03bbfdc7fa5cdbc9647333de8d8170fc6264d
+      const response = await axios.post('https://test3n-858207113120.us-central1.run.app/predict', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
+
 
       const { prediction, probability } = response.data;
 

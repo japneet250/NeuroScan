@@ -31,6 +31,13 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
   }
+
+  @media (max-width: 480px){
+    margin-top : 0px;
+  
+  
+  
+  }
 `;
 
 const Left = styled.div`
@@ -60,6 +67,13 @@ const Left = styled.div`
   @media only screen and (max-width: 576px) {
     scale: 0.7;
     margin-top: 100px;
+  }
+
+  @media (max-width: 480px){
+    margin-top : 50px;
+  
+  
+  
   }
 `;
 
@@ -161,8 +175,10 @@ const Right = styled.div`
   @media only screen and (max-width: 1400px) {
     width: 100%;
 
-
+  @media only screen and (max-width: 480px) {
+    margin-bottom: 0px;
   }
+
 `;
 
 const Img = styled.img`
@@ -206,10 +222,34 @@ const Img = styled.img`
     height: 250px;
   }
 
+  @media only screen and (max-width: 480px) {
+    margin-bottom: 5px;
+  }
+
+  
   @keyframes animate {
     to {
       transform: translateY(20px);
     }
+  }
+`;
+
+const CanvasContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  @media (max-width: 480px) {
+    width: auto;
+    height: 450px; /* Set a specific height for mobile */
+    margin: auto;
+    margin-top: -60px;
+  }
+`;
+
+const SphereContainer = styled(Sphere)`
+  @media (max-width: 480px) {
+    
   }
 `;
 
@@ -233,21 +273,23 @@ const Hero = () => {
           </a>
         </Left>
         <Right>
-        <Canvas>
-            <Suspense fallback={null}>
-              <OrbitControls enableZoom={false} />
-              <ambientLight intensity={1} />
-              <directionalLight position={[3, 2, 1]} />
-              <Sphere args={[1, 100, 200]} scale={2.0}>
-                <MeshDistortMaterial
-                  color="#3d1c56"
-                  attach="material"
-                  distort={0.5}
-                  speed={2}
-                />
-              </Sphere>
-            </Suspense>
+          <CanvasContainer>
+            <Canvas>
+              <Suspense fallback={null}>
+                <OrbitControls enableZoom={false} />
+                <ambientLight intensity={1} />
+                <directionalLight position={[3, 2, 1]} />
+                <SphereContainer args={[1, 100, 200]} scale={2.0}>
+                  <MeshDistortMaterial
+                    color="#3d1c56"
+                    attach="material"
+                    distort={0.5}
+                    speed={2}
+                  />
+                </SphereContainer>
+              </Suspense>
             </Canvas>
+          </CanvasContainer>
           <Img src="./img/brain_no_background.png" />
         </Right>
       </Container>
