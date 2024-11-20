@@ -157,7 +157,7 @@ const ProductDesign = () => {
           <Suspense fallback={null}>
             <Stage environment="city" intensity={0.6} center={false} adjustCamera={false}>
               {/* Dynamically adjust the scale based on screen size */}
-              <Shoe scale={isMobile_new ? [2.5, 2.5,2.5] : isTab ? [3.0, 3.0,3.0] : isMobile ? [3.0, 3.0,3.0] : [2.5, 2.5, 2.5]} />
+              <Shoe scale={isMobile_new ? [2.3, 2.3,2.3] : isTab ? [3.0, 3.0,3.0] : isMobile ? [3.0, 3.0,3.0] : [2.5, 2.5, 2.5]} />
             </Stage>
             <OrbitControls enableZoom={false} autoRotate />
           </Suspense>
